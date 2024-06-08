@@ -19,7 +19,7 @@ export const Styles = StyleSheet.create({
       
       },
       homeActionContainer: {
-        flexBasis:'50%',
+        flexBasis:'40%',
         alignSelf: "center",
         justifyContent:'flex-end',
         width: "100%",
@@ -27,8 +27,14 @@ export const Styles = StyleSheet.create({
         marginBottom:20
         
       },
+      homeLogoContainer: {
+        flexBasis: '60%',
+        flexShrink: 1,
+        alignContent: 'center',
+        justifyContent: 'flex-end',
+      },
       logoContainer: {
-        flexBasis: '50%',
+        flexBasis: '30%',
         flexShrink: 1,
         alignContent: 'center',
         justifyContent: 'flex-end',
