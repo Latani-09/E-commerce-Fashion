@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 export const Styles = StyleSheet.create({
     colContainer: {
-        flex: 1,
+        display:'flex',
         flexDirection: "column",/** */
         width: '100%',
         height: '100%',
@@ -14,27 +14,36 @@ export const Styles = StyleSheet.create({
         flexDirection: "column",/** */
         width: '100%',
         height: '100%',
-        alignContent:'center',
+        backgroundColor:'grey'
+
       
       },
-    
+      homeActionContainer: {
+        flexBasis:'50%',
+        alignSelf: "center",
+        justifyContent:'flex-end',
+        width: "100%",
+        maxWidth:400,
+        marginBottom:20
+        
+      },
+      logoContainer: {
+        flexBasis: '50%',
+        flexShrink: 1,
+        alignContent: 'center',
+        justifyContent: 'flex-end',
+      },
 
     blackShade: {
         flex: 1,
         flexDirection: 'column',
         backgroundColor: 'rgba(0, 0, 0, 0.7)',
-        alignItems: 'center',
         width: '100%',
-        height:'100%'
+        height:'100%',
+       
     },
-    actions: {
-        borderWidth: 2,
-        borderColor: 'white',
-        borderRadius: 50,
-        padding: 10,
-        margin: 5,
-        alignItems: 'center',
-    },
+
+
     loginActions: {
         flexDirection: "row",
         justifyContent: "center",
@@ -48,9 +57,36 @@ export const Styles = StyleSheet.create({
         alignItems: "center",
         backgroundColor: "black",
       },
-    pressed: {
-        backgroundColor: 'rgb(255, 255, 255)',
+
+  homeLogin:{
+    borderWidth: 2,
+    backgroundColor: 'white',
+    borderColor:'white',
+    borderRadius: 50,
+    padding: 10,
+    margin: 5,
+    alignItems: 'center',
+  },
+  homeLoginText:{
+    textAlign: 'center',
+    color: 'black',
+    fontSize:16,
+    fontWeight:'bold'
+  },
+    loginPressed:{
+      backgroundColor: 'rgba(0,0,0,0.1)',
     },
+  loginTextPressed:{
+    color: 'white',
+  },
+  actions: {
+    borderWidth: 2,
+    borderColor: 'white',
+    borderRadius: 50,
+    padding: 10,
+    margin: 5,
+    alignItems: 'center',
+},
     actionsText: {
         textAlign: 'center',
         color: 'white',
@@ -58,30 +94,28 @@ export const Styles = StyleSheet.create({
         fontWeight:'bold'
     },
 
-    textPressed: {
-        color: 'black',
-    },
+    pressed: {
+      backgroundColor: 'rgb(255, 255, 255)',
+  },
+  textPressed: {
+    color: 'black',
+},
+
 
     actionContainer: {
-        flex: 1,
-        position:'relative',
-        alignSelf: "center",
-        width: "90%",
-        maxWidth:400,
-        marginBottom: 35,
-      },
-    logoContainer:{
-       
-       alignContent:'center',
-       justifyContent:'flex-start',
-      
 
-    },
+        alignSelf: "center",
+        width: "100%",
+        maxWidth:400,
+        
+      },
+     
 
     logoImage:{
         alignSelf:'center', /**/
-        width:200,
-        height:200
+        width:150,
+        height:100,
+        marginVertical:20
     },
     /**/
 
@@ -91,13 +125,11 @@ export const Styles = StyleSheet.create({
     
 
       welcomeTextStyle:{
-        marginLeft:15,
         fontSize:20,
         fontWeight:'bold',
 
       },
       normalTextStyle:{
-        marginLeft:15,
         color:'rgb(20,20,20)',
         justifyContent:'flex-start',
          marginBottom:'10%',
@@ -154,7 +186,6 @@ export const Styles = StyleSheet.create({
         textAlign: "center",
         color: "gray",
         fontSize: 16,
-    
       },
       loginfbText: {
         textAlign: "center",
@@ -210,6 +241,11 @@ export const Styles = StyleSheet.create({
         width: "90%",
       },
      
+      checkBoxAgree:{
+        color:'rgba(0,0,0,0.1)',
+        backgroundColor:'none',
+        justifyContent:'flex-start'
+      }
 
 
 });

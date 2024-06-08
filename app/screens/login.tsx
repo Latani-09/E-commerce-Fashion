@@ -15,7 +15,7 @@ export default function Login() {
   const [isEmailValid,setIsEmailValid]=useState(false);
   const [isPwdValid,setIsPwdValid]=useState(false);
 
-  const logo = require("@/assets/images/logoBlack.png");
+  const logoBlack = require("@/assets/images/logo3Black.png");
   const fbIcon = require("@/assets/images/fbWhite.png");
   const gIcon = require("@/assets/images/googleicon.png");
   const appleIcon = require("@/assets/images/appleIcon.png");
@@ -31,13 +31,8 @@ export default function Login() {
     }
   }
   function ValidatePwd(input:string) {
-    var validPwd = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[.@!#$%&'+/=?^_`{|}~-])[a-zA-Z0-9.@!#$%&'+/=?^_`{|}~-]{8,}$/;
-
-    if (input.length>=8 &&input.match(validPwd)) {  
-      return true;
-    } else {
-      return false;
-    }
+    var validPwd= /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[.@!#$%&'*+/=?^_`{|}~-])/;
+    return input.length>7 && validPwd.test(input);
   }
   const onPressFunction = (button: string) => {
     setPressedButton(button);
@@ -64,17 +59,19 @@ export default function Login() {
   }
   return (
     <View style={Styles.colContainer}>
+      <View style={Styles.logoContainer}>
         <Image
-          source={logo}
+          source={logoBlack}
           style={Styles.logoImage}
           resizeMode="contain"
           resizeMethod="scale"
         ></Image>
-        <Text style={Styles.welcomeTextStyle}>Welcome!</Text>
+       </View>        
+      <View style={Styles.actionContainer}>
+      <Text style={Styles.welcomeTextStyle}>Welcome!</Text>
         <Text style={Styles.normalTextStyle}>
           please login or sign up to continue our app
         </Text>
-      <View style={Styles.actionContainer}>
         <Text style={Styles.inputLabelStyle}>Email</Text>
         <View style={Styles.inputContainerStyle}>
           <TextInput
