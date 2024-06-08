@@ -55,7 +55,7 @@ export default function RootLayout() {
     >
       <Stack.Navigator
         screenOptions={{
-          headerShown: true,
+          headerShown: false,
         }}
       >
         <Stack.Screen name="login" component={Login} />
