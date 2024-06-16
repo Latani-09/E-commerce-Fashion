@@ -96,7 +96,7 @@ export default function Register() {
         <View style={Styles.actionContainer}>
         <Text style={Styles.welcomeTextStyle}>Sign Up</Text>
         <Text style={Styles.normalTextStyle}>
-          Create new account
+          Create a new account
         </Text>
         <Text style={Styles.inputLabelStyle}>User Name</Text>
         <View style={Styles.inputContainerStyle}>
